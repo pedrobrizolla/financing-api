@@ -1,0 +1,31 @@
+{
+  "name": "financing-api",
+  "version": "1.0.0",
+  "description": "Teste técnico",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --import=tsx --watch --env-file=.env ./src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrobrizolla/financing-api.git"
+  },
+  "author": "João Pedro Brizolla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrobrizolla/financing-api/issues"
+  },
+  "homepage": "https://github.com/pedrobrizolla/financing-api#readme",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.15",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0"
+  }
+}
