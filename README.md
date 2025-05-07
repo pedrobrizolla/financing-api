@@ -17,8 +17,8 @@ Este teste simula parte de um módulo interno que permite que estudantes se cada
 ### Tecnologias
 
 - [x] Node.js + TypeScript
-- [ ] Prisma (ORM)
-- [ ] PostgreSQL com Docker Compose
+- [x] Prisma (ORM)
+- [x] PostgreSQL com Docker Compose
 - [ ] JWT com expiração de 5 min
 - [ ] Arquitetura modular (controllers, services, middlewares...)
 - [ ] Validação com Zod, Joi ou similar
