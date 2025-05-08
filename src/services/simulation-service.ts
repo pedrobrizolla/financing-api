@@ -30,3 +30,16 @@ export const updateFinancing = async ({
     return null;
   }
 };
+
+export const deleteFinancing = async (id_simulacao: number) => {
+  try {
+    const simulacaoExcluida = await prisma.simulacao.delete({
+      where: { id: id_simulacao },
+    });
+
+    return simulacaoExcluida;
+  } catch (error) {
+    console.error("Erro ao excluir simulação:", error);
+    return null;
+  }
+};

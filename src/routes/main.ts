@@ -26,4 +26,9 @@ mainRouter.put(
   verifyJWT,
   simulationController.editSimulation
 );
+mainRouter.delete(
+  "/api/simulations/:id",
+  verifyJWT,
+  simulationController.deleteSimulation
+);
 // mainRouter.get("/api/simulations");

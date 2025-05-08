@@ -3,6 +3,7 @@ import { createSimulationSchema } from "../schemas/create-simulation";
 import { editSimulationSchema } from "../schemas/edit-simulation";
 import {
   createFinancing,
+  deleteFinancing,
   updateFinancing,
 } from "../services/simulation-service";
 import { findUserByEmail } from "../services/user";
@@ -103,4 +104,29 @@ export const editSimulation: RequestHandler = async (
   }
 
   res.status(200).json(simulacao);
+};
+
+export const deleteSimulation: RequestHandler = async (
+  req: Request,
+  res: Response
+) => {
+  const { emailToken } = req as ExtendRequest;
+
+  const student = await findUserByEmail(emailToken as string);
+
+  if (!student) {
+    res.status(404).json({ error: "Estudante não encontrado!" });
+    return;
+  }
+
+  const id_simulacao = parseInt(req.params.id);
+
+  const simulacao = await deleteFinancing(id_simulacao);
+
+  if (!simulacao) {
+    res.status(404).json({ error: "Simulação não encontrada para exclusão!" });
+    return;
+  }
+
+  res.status(200).json({ message: "Simulação excluída com sucesso!" });
 };
