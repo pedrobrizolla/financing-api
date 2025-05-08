@@ -8,7 +8,7 @@ Este teste simula parte de um módulo interno que permite que estudantes se cada
 
 - [x] Registro de estudante
 - [x] Login
-- [ ] Consultar perfil
+- [x] Consultar perfil
 - [ ] Editar perfil
 - [ ] Simular financiamento
 
