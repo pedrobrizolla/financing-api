@@ -19,7 +19,7 @@ Este teste simula parte de um módulo interno que permite que estudantes se cada
 - [x] Node.js + TypeScript
 - [x] Prisma (ORM)
 - [x] PostgreSQL com Docker Compose
-- [ ] JWT com expiração de 5 min
+- [x] JWT com expiração de 5 min
 - [x] Arquitetura modular (controllers, services, middlewares...)
 - [x] Validação com Zod
 - [x] Tratamento de erros

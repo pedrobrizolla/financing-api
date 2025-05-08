@@ -2,6 +2,7 @@ import { hash } from "bcrypt-ts";
 import { RequestHandler } from "express";
 import { registerSchema } from "../schemas/register";
 import { createUser, findUserByEmail } from "../services/user";
+import { createJWT } from "../utils/jwt";
 
 export const register: RequestHandler = async (req, res) => {
   const safeData = registerSchema.safeParse(req.body);
@@ -27,7 +28,7 @@ export const register: RequestHandler = async (req, res) => {
     senha: hashPassword,
   });
 
-  const token = "";
+  const token = createJWT(safeData.data.email);
 
   res.status(201).json({
     token,
