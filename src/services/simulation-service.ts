@@ -31,6 +31,19 @@ export const updateFinancing = async ({
   }
 };
 
+export const listSimulationsByUser = async (id_estudante: number) => {
+  try {
+    const simulacoes = await prisma.simulacao.findMany({
+      where: { id_estudante },
+    });
+
+    return simulacoes;
+  } catch (error) {
+    console.error("Erro ao listar simulações:", error);
+    return [];
+  }
+};
+
 export const deleteFinancing = async (id_simulacao: number) => {
   try {
     const simulacaoExcluida = await prisma.simulacao.delete({

@@ -16,6 +16,11 @@ mainRouter.post("/api/login", authController.login);
 mainRouter.get("/api/me", verifyJWT, profileController.getProfile);
 mainRouter.put("/api/me", verifyJWT, profileController.updateProfile);
 
+mainRouter.get(
+  "/api/simulations",
+  verifyJWT,
+  simulationController.listSimulations
+);
 mainRouter.post(
   "/api/simulations",
   verifyJWT,
@@ -31,4 +36,3 @@ mainRouter.delete(
   verifyJWT,
   simulationController.deleteSimulation
 );
-// mainRouter.get("/api/simulations");

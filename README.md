@@ -11,9 +11,9 @@ Este teste simula parte de um módulo interno que permite que estudantes se cada
 - [x] Consultar perfil
 - [x] Editar perfil
 - [x] Simular financiamento
-- [ ] Listar financiamentos
+- [x] Listar financiamentos
 - [x] Editar financiamentos
-- [ ] Excluir financiamentos
+- [x] Excluir financiamentos
 
 ---
 
