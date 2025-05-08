@@ -20,7 +20,7 @@ Este teste simula parte de um módulo interno que permite que estudantes se cada
 - [x] Prisma (ORM)
 - [x] PostgreSQL com Docker Compose
 - [ ] JWT com expiração de 5 min
-- [ ] Arquitetura modular (controllers, services, middlewares...)
+- [x] Arquitetura modular (controllers, services, middlewares...)
 - [ ] Validação com Zod, Joi ou similar
 - [ ] Tratamento de erros
 
@@ -28,22 +28,22 @@ Este teste simula parte de um módulo interno que permite que estudantes se cada
 
 ### Estudante
 
-- [ ] `id`: primary key
-- [ ] `nome`: obrigatório
-- [ ] `sobrenome`: obrigatório
-- [ ] `email`: obrigatório e único
-- [ ] `senha`: obrigatória (criptografada)
+- [x] `id`: primary key
+- [x] `nome`: obrigatório
+- [x] `sobrenome`: obrigatório
+- [x] `email`: obrigatório e único
+- [x] `senha`: obrigatória (criptografada)
 
 ---
 
 ### Simulações de Financiamento
 
-- [ ] `id`: primary key
-- [ ] `id_estudante`: obrigatório
-- [ ] `valor_total`: obrigatório
-- [ ] `quantidade_parcelas`: obrigatório
-- [ ] `juros_ao_mes`: obrigatório
-- [ ] `valor_parcela_mensal`: calculado
+- [x] `id`: primary key
+- [x] `id_estudante`: obrigatório
+- [x] `valor_total`: obrigatório
+- [x] `quantidade_parcelas`: obrigatório
+- [x] `juros_ao_mes`: obrigatório
+- [x] `valor_parcela_mensal`: calculado
 
 ---
 
