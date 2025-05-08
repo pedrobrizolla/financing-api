@@ -14,3 +14,15 @@ export const createUser = async (data: Prisma.EstudanteCreateInput) => {
 
   return newUser;
 };
+
+export const updateUser = async (
+  email: string,
+  data: Prisma.EstudanteUpdateInput
+) => {
+  const updatedUser = await prisma.estudante.update({
+    where: { email },
+    data,
+  });
+
+  return updatedUser;
+};

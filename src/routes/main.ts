@@ -13,7 +13,7 @@ mainRouter.post("/api/register", authController.register);
 mainRouter.post("/api/login", authController.login);
 
 mainRouter.get("/api/me", verifyJWT, profileController.getProfile);
-// mainRouter.put("/api/me");
+mainRouter.put("/api/me", verifyJWT, profileController.updateProfile);
 
 // mainRouter.get("/api/simulations");
 // mainRouter.post("/api/simulations");
