@@ -1,4 +1,7 @@
+import { NextFunction, Response } from "express";
 import jwt from "jsonwebtoken";
+import { findUserByEmail } from "../services/user";
+import { ExtendRequest } from "../types/extend-request";
 
 enum JWTExpiry {
   ONE_MINUTE = "1m",
@@ -15,4 +18,39 @@ export const createJWT = (email: string): string => {
   return jwt.sign({ email }, process.env.JWT_SECRET as string, {
     expiresIn,
   });
+};
+
+export const verifyJWT = (
+  req: ExtendRequest,
+  res: Response,
+  next: NextFunction
+) => {
+  const authHeader = req.headers["authorization"];
+
+  if (!authHeader) {
+    res.status(401).json({ message: "Não autorizado!" });
+    return;
+  }
+
+  const token = authHeader.split(" ")[1];
+
+  jwt.verify(
+    token,
+    process.env.JWT_SECRET as string,
+    async (err, decoded: any) => {
+      if (err) {
+        res.status(401).json({ message: "Não autorizado!" });
+        return;
+      }
+
+      const user = await findUserByEmail(decoded.email);
+      if (!user) {
+        res.status(401).json({ message: "Não autorizado!" });
+        return;
+      }
+      req.emailToken = user.email;
+
+      next();
+    }
+  );
 };
