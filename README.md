@@ -7,7 +7,7 @@ Este teste simula parte de um módulo interno que permite que estudantes se cada
 ### Funcionalidades
 
 - [x] Registro de estudante
-- [ ] Login
+- [x] Login
 - [ ] Consultar perfil
 - [ ] Editar perfil
 - [ ] Simular financiamento

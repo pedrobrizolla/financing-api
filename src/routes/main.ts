@@ -8,7 +8,7 @@ mainRouter.get("/api/ping", pingController.ping);
 // mainRouter.get("/privateping");
 
 mainRouter.post("/api/register", authController.register);
-// mainRouter.post("/api/login");
+mainRouter.post("/api/login", authController.login);
 
 // mainRouter.get("/api/me");
 // mainRouter.put("/api/me");
