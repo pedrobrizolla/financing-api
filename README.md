@@ -6,7 +6,7 @@ Este teste simula parte de um módulo interno que permite que estudantes se cada
 
 ### Funcionalidades
 
-- [ ] Registro de estudante
+- [x] Registro de estudante
 - [ ] Login
 - [ ] Consultar perfil
 - [ ] Editar perfil
@@ -21,8 +21,9 @@ Este teste simula parte de um módulo interno que permite que estudantes se cada
 - [x] PostgreSQL com Docker Compose
 - [ ] JWT com expiração de 5 min
 - [x] Arquitetura modular (controllers, services, middlewares...)
-- [ ] Validação com Zod, Joi ou similar
-- [ ] Tratamento de erros
+- [x] Validação com Zod
+- [x] Tratamento de erros
+- [x] Hash de senha com bcrypt
 
 ---
 
@@ -49,15 +50,15 @@ Este teste simula parte de um módulo interno que permite que estudantes se cada
 
 ### Endpoints
 
-- [ ] `POST /api/register` — Registrar estudante
-- [ ] `POST /api/login` — Login
-- [ ] `POST /api/me` — Obter dados do estudante logado
-- [ ] `PUT /api/me` — Atualizar dados do estudante
+- [x] `POST /api/register` — Registrar estudante
+- [x] `POST /api/login` — Login
+- [x] `POST /api/me` — Obter dados do estudante logado
+- [x] `PUT /api/me` — Atualizar dados do estudante
 
 #### Simulações (Requer autenticação):
 
-- [ ] `POST /api/simulations` — Criar simulação
-- [ ] `GET /api/simulations` — Listar simulações
+- [x] `POST /api/simulations` — Criar simulação
+- [x] `GET /api/simulations` — Listar simulações
 
 ---
 
