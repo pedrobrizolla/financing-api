@@ -10,7 +10,10 @@ Este teste simula parte de um módulo interno que permite que estudantes se cada
 - [x] Login
 - [x] Consultar perfil
 - [x] Editar perfil
-- [ ] Simular financiamento
+- [x] Simular financiamento
+- [ ] Listar financiamentos
+- [x] Editar financiamentos
+- [ ] Excluir financiamentos
 
 ---
 
@@ -64,8 +67,8 @@ Este teste simula parte de um módulo interno que permite que estudantes se cada
 
 ### Regras
 
-- [ ] Estudante só pode visualizar, editar ou excluir suas próprias simulações
-- [ ] `valor_parcela_mensal` deve ser calculado usando a fórmula abaixo
+- [x] Estudante só pode visualizar, editar ou excluir suas próprias simulações
+- [x] `valor_parcela_mensal` deve ser calculado usando a fórmula abaixo
 
 ---
 
@@ -74,3 +77,9 @@ Este teste simula parte de um módulo interno que permite que estudantes se cada
 ```text
 PMT = PV * (i / (1 - (1 + i)^-n))
 ```
+
+### Testes unitários
+
+- [x] utils/calc.test.ts
+
+---

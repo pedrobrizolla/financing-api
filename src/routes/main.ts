@@ -21,4 +21,9 @@ mainRouter.post(
   verifyJWT,
   simulationController.createSimulation
 );
+mainRouter.put(
+  "/api/simulations/:id",
+  verifyJWT,
+  simulationController.editSimulation
+);
 // mainRouter.get("/api/simulations");
